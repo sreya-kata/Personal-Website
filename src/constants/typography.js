@@ -14,16 +14,16 @@ const minSize = {
   h1: 50,
   h2: 35,
   h3: 25,
-  h4: 20,
-  p: 11.5,
+  h4: 16,
+  p: 11.8,
 };
 
 const fontSizes = {
   h1: `calc(${minSize.h1}px + (88 - ${minSize.h1}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h2: `calc(${minSize.h2}px + (57 - ${minSize.h2}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
   h3: `calc(${minSize.h3}px + (44 - ${minSize.h3}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  h4: `calc(${minSize.h4}px + (28 - ${minSize.h4}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
-  p: `calc(${minSize.p}px + (15.5 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  h4: `calc(${minSize.h4}px + (25 - ${minSize.h4}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
+  p: `calc(${minSize.p}px + (15.8 - ${minSize.p}) * ((100vw - ${size.mobile}px) / (${size.desktopMax} - ${size.mobile})))`,
 };
 
 const textStyles = {
@@ -93,6 +93,8 @@ const P = styled.p`
 const Link = styled.a`
   text-decoration: none;
   color: ${gray};
+  font-family: ${fonts.body};
+  cursor: pointer;
   border-bottom: 1.4px solid ${tan};
   transition: all 0.2s;
 
@@ -101,4 +103,4 @@ const Link = styled.a`
   }
 `;
 
-export { fonts, H1, H2, H3, H4, P, Link, fontSizes, fontWeights };
+export { fonts, H1, H2, H3, H4, P, Link, fontSizes, fontWeights, textStyles };

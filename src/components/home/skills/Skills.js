@@ -1,24 +1,22 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faCropSimple } from "@fortawesome/free-solid-svg-icons";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { faHammer } from "@fortawesome/free-solid-svg-icons";
 import {
-  AboutSection,
-  HalfColumn,
-  TextColumn,
-  H3WithSpacing,
-  Bio,
-  ImageColumn,
-  Img,
+  SkillsSection,
+  SkillsIntro,
+  Cards,
+  SkillList,
+  PCard,
 } from "./Skills-Styles";
-import vector from "../../../assets/vector.png";
-import { Button } from "../../../constants/buttons";
-import { P, Link } from "../../../constants/typography";
+import { P, H4, H3 } from "../../../constants/typography";
+import { white } from "../../../constants/colors";
+import "./Skills.css";
 
 const cards = {
   Coding: {
-    icon: faCode,
+    icon: faLaptopCode,
     values: ["Java", "HTML/CSS", "JavaScript", "SQL", "Python"],
   },
   Frameworks: {
@@ -35,35 +33,39 @@ const cards = {
   },
 };
 
-// {skill.values.map((skill) => {
-//   return (
-//   <li key={index}>{skill}</li>;
-// })}
-
 const Skills = () => {
   return (
-    <div>
-      <div>
-        <h3>Skills</h3>
-        <p>
+    <SkillsSection>
+      <SkillsIntro>
+        <H3>Skills</H3>
+        <P>
           Being a combined major, I have experience with both programming and
           theory as well as leadership and communication skills.
-        </p>
-      </div>
-      <div>
+        </P>
+      </SkillsIntro>
+      <Cards>
         {Object.keys(cards).map(function (keyName, keyIndex) {
           return (
-            <ul key={keyIndex}>
-              <h4>{keyName}</h4>
-              <FontAwesomeIcon icon={cards[keyName].icon} />
+            <SkillList key={keyIndex}>
+              <FontAwesomeIcon
+                icon={cards[keyName].icon}
+                size="2xl"
+                className="font-awesome-icon"
+                color={white}
+              />
+              <H4>{keyName}</H4>
               {cards[keyName].values.map((value) => {
-                return <li>{value}</li>;
+                return (
+                  <li>
+                    <PCard>{value}</PCard>
+                  </li>
+                );
               })}
-            </ul>
+            </SkillList>
           );
         })}
-      </div>
-    </div>
+      </Cards>
+    </SkillsSection>
   );
 };
 

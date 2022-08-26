@@ -1,46 +1,42 @@
 import styled from "styled-components";
-import { H3 } from "../../../constants/typography";
+import { boxShadow } from "../../../constants/colors";
+import { P } from "../../../constants/typography";
 
-const AboutSection = styled.section`
-  display: flex;
-  align-items: center;
-  margin-top: 7em;
+const SkillsSection = styled.div`
+  margin-top: 7rem;
 `;
 
-const HalfColumn = styled.div`
-  width: 50%;
-`;
-
-const TextColumn = styled.div`
-  padding-left: 4em;
+const SkillsIntro = styled.div`
+  text-align: center;
+  padding-left: 6em;
   padding-right: 6em;
 `;
 
-const H3WithSpacing = styled(H3)`
-  margin-top: 0.05em;
-  margin-bottom: 0.05em;
-  letter-spacing: 0.55em;
+const Cards = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-left: 6em;
+  padding-right: 6em;
+  margin-top: 3rem;
 `;
 
-const Bio = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+const SkillList = styled.ul`
+  background: #f8f8f8;
+  width: 22%;
+  list-style: none;
+  padding-inline-start: 0;
+  text-align: center;
+  padding-top: 3.3em;
+  padding-bottom: 1.7em;
+  transition: box-shadow 0.7s ease;
+
+  :hover {
+    box-shadow: ${boxShadow};
+  }
 `;
 
-const Img = styled.img`
-  width: 100%;
+const PCard = styled(P)`
+  line-height: 1em;
 `;
 
-const ImageColumn = styled.div`
-  padding-left: 4em;
-`;
-
-export {
-  AboutSection,
-  HalfColumn,
-  TextColumn,
-  H3WithSpacing,
-  Bio,
-  Img,
-  ImageColumn,
-};
+export { SkillsSection, SkillsIntro, Cards, SkillList, PCard };
