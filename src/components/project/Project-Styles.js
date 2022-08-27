@@ -24,12 +24,20 @@ const HalfColumn = styled.div`
 
 const TextColumn = styled.div`
   @media ${devices.mobile} {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2.7em;
+    padding-right: 2.7em;
+  }
+  @media ${devices.tablet} {
+    padding-left: 4em;
+    padding-right: 4em;
   }
   @media ${devices.laptop} {
     padding-left: 6em;
     padding-right: 4em;
+  }
+  @media ${devices.desktop} {
+    padding-left: 8.5em;
+    padding-right: 4.8em;
   }
 `;
 
@@ -44,14 +52,21 @@ const Img = styled.img`
 
 const ImageColumn = styled.div`
   @media ${devices.mobile} {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2.7em;
+    padding-right: 2.7em;
     margin-top: 2rem;
   }
-  @media ${devices.laptop} {
+  @media ${devices.tablet} {
+    padding-left: 4em;
     padding-right: 4em;
+  }
+  @media ${devices.laptop} {
+    padding-right: 6em;
     padding-left: 0;
     margin-top: 0;
+  }
+  @media ${devices.desktop} {
+    padding-right: 8.5em;
   }
 `;
 

@@ -16,8 +16,8 @@ const ProjectsSection = styled.div`
 const ProjectsIntro = styled.div`
   text-align: center;
   @media ${devices.mobile} {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2.7em;
+    padding-right: 2.7em;
   }
   @media ${devices.laptop} {
     padding-left: 6em;
@@ -32,12 +32,20 @@ const ProjectCards = styled.div`
   margin-top: 3rem;
 
   @media ${devices.mobile} {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2.7em;
+    padding-right: 2.7em;
+  }
+  @media ${devices.tablet} {
+    padding-left: 4em;
+    padding-right: 4em;
   }
   @media ${devices.laptop} {
     padding-left: 6em;
     padding-right: 6em;
+  }
+  @media ${devices.desktop} {
+    padding-left: 8.5em;
+    padding-right: 8.5em;
   }
 `;
 
@@ -52,6 +60,9 @@ const Card = styled.div`
   }
   @media ${devices.laptop} {
     width: 30%;
+  }
+  @media ${devices.desktop} {
+    width: 27%;
   }
 `;
 

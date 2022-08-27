@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { white, tanGradient, offBlack } from "./colors";
 import { fonts } from "./typography";
+import { devices } from "./devices";
 
 const Button = styled.button`
   position: relative;
@@ -9,7 +10,7 @@ const Button = styled.button`
   color: ${(props) => (props.secondary ? offBlack : white)};
   border: 3px solid transparent;
   border-radius: 4px;
-  padding: 1em 2.3em;
+  padding: 1em 1.8em;
   box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -35,6 +36,10 @@ const Button = styled.button`
     content: "";
     z-index: -1;
     border-radius: 4px;
+  }
+
+  @media ${devices.tablet} {
+    padding: 1em 2.3em;
   }
 `;
 

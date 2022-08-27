@@ -10,8 +10,8 @@ const SkillsSection = styled.div`
 const SkillsIntro = styled.div`
   text-align: center;
   @media ${devices.mobile} {
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2.7em;
+    padding-right: 2.7em;
   }
   @media ${devices.laptop} {
     padding-left: 6em;
@@ -26,13 +26,21 @@ const Cards = styled.div`
 
   @media ${devices.mobile} {
     margin-top: 2rem;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 2.7em;
+    padding-right: 2.7em;
+  }
+  @media ${devices.tablet} {
+    padding-left: 4em;
+    padding-right: 4em;
   }
   @media ${devices.laptop} {
     margin-top: 3rem;
     padding-left: 6em;
     padding-right: 6em;
+  }
+  @media ${devices.desktop} {
+    padding-left: 8.5em;
+    padding-right: 8.5em;
   }
 `;
 
@@ -54,7 +62,7 @@ const SkillList = styled.ul`
   }
 
   @media ${devices.tablet} {
-    width: 100%;
+    width: 47%;
   }
 
   @media ${devices.laptop} {

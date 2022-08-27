@@ -5,13 +5,19 @@ import { devices } from "../../constants/devices";
 const Navbar = styled.nav`
   display: flex;
   align-items: center;
-  padding-top: 1.5em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-top: 1.7em;
+  padding-left: 2.7em;
+  padding-right: 2.7em;
 
   @media ${devices.laptop} {
+    padding-top: 1.5em;
     padding-left: 4em;
     padding-right: 4em;
+  }
+
+  @media ${devices.desktop} {
+    padding-left: 6em;
+    padding-right: 6em;
   }
 `;
 

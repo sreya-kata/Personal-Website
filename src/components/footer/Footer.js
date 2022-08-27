@@ -41,7 +41,7 @@ const Footer = () => {
       <SocialMedias>
         {socialMedias.map((socialMedia) => {
           return (
-            <SocialMedia href={socialMedia.url}>
+            <SocialMedia href={socialMedia.url} target="_blank">
               <div dangerouslySetInnerHTML={{ __html: socialMedia.icon }}></div>
             </SocialMedia>
           );
