@@ -5,12 +5,20 @@ const AboutSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 7em;
+  margin-top: 5em;
+
+  @media ${devices.laptop} {
+    margin-top: 7em;
+  }
 `;
 
 const HalfColumn = styled.div`
   @media ${devices.mobile} {
     width: 100%;
+  }
+  @media ${devices.tabletMax} {
+    margin-top: 2rem;
+    order: ${(props) => (props.secondMobile ? "2" : "")};
   }
   @media ${devices.laptop} {
     width: 50%;

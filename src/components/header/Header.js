@@ -8,10 +8,13 @@ import {
   NavItem,
   NavLink,
   DesktopNavLinks,
+  MobileNavLinks,
+  MobileNavLink,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,
   CrossContainer,
+  MobileNavItem,
 } from "./Header-Styles";
 import { Hamburger, Cross } from "../../constants/icons";
 
@@ -78,13 +81,17 @@ const Header = () => {
             <Cross />
           </CrossContainer>
           <SmallLinksContainer>
-            {Object.keys(navLinks).map((key, index) => {
-              return (
-                <NavItem key={index}>
-                  <NavLink href={`/${navLinks[key]}`}>{key}</NavLink>
-                </NavItem>
-              );
-            })}
+            <MobileNavLinks>
+              {Object.keys(navLinks).map((key, index) => {
+                return (
+                  <MobileNavItem key={index}>
+                    <MobileNavLink href={`/${navLinks[key]}`}>
+                      {key}
+                    </MobileNavLink>
+                  </MobileNavItem>
+                );
+              })}
+            </MobileNavLinks>
           </SmallLinksContainer>
         </SmallMenuContainer>
       )}

@@ -13,7 +13,7 @@ import { H3WithSpacing, P, StyledLink } from "../../../constants/typography";
 const About = () => {
   return (
     <AboutSection id="about">
-      <HalfColumn>
+      <HalfColumn secondMobile>
         <ImageColumn>
           <Img src={vector} alt="cartoon vector of girl"></Img>
         </ImageColumn>

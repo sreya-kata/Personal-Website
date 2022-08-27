@@ -23,13 +23,14 @@ const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 3rem;
 
   @media ${devices.mobile} {
+    margin-top: 2rem;
     padding-left: 3em;
     padding-right: 3em;
   }
   @media ${devices.laptop} {
+    margin-top: 3rem;
     padding-left: 6em;
     padding-right: 6em;
   }

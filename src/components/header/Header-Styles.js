@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { brown } from "../../constants/colors";
+import { brown, white } from "../../constants/colors";
 import { devices } from "../../constants/devices";
 
 const Navbar = styled.nav`
@@ -63,6 +63,12 @@ const DesktopNavLinks = styled.div`
   }
 `;
 
+const MobileNavLinks = styled.ul`
+  list-style: none;
+  margin-top: 0.5rem;
+  padding-inline-start: 1rem;
+`;
+
 const SmallNavLinkContainer = styled.div`
   overflow: hidden;
   &:hover {
@@ -72,7 +78,7 @@ const SmallNavLinkContainer = styled.div`
     position: relative;
     display: inline-flex;
     float: right;
-    margin: 0.7rem 0.1rem 0rem 0rem;
+    margin: 0.1rem 0.1rem 0rem 0rem;
     z-index: 1;
   }
   @media ${devices.laptop} {
@@ -104,7 +110,7 @@ const SmallMenuContainer = styled.div`
 const SmallLinksContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0rem 0 0.9rem 0;
+  margin: 0rem 0 0.3rem 0;
   > * {
     margin: 0.9rem;
   }
@@ -118,6 +124,14 @@ const CrossContainer = styled.div`
   }
 `;
 
+const MobileNavItem = styled(NavItem)`
+  margin-bottom: 0.7rem;
+`;
+
+const MobileNavLink = styled(NavLink)`
+  color: ${white};
+`;
+
 export {
   Navbar,
   FlexColumn,
@@ -125,6 +139,9 @@ export {
   NavItem,
   NavLink,
   DesktopNavLinks,
+  MobileNavLinks,
+  MobileNavItem,
+  MobileNavLink,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,
