@@ -2,18 +2,17 @@ import {
   AboutSection,
   HalfColumn,
   TextColumn,
-  H3WithSpacing,
   Bio,
   ImageColumn,
   Img,
 } from "./About-Styles";
 import vector from "../../../assets/vector.png";
 import { Button } from "../../../constants/buttons";
-import { P, Link } from "../../../constants/typography";
+import { H3WithSpacing, P, StyledLink } from "../../../constants/typography";
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <HalfColumn>
         <ImageColumn>
           <Img src={vector} alt="cartoon vector of girl"></Img>
@@ -30,13 +29,13 @@ const About = () => {
               Science in Computer Science and Business (Marketing Analytics) in
               Boston, MA. I’m interested in web and software development and
               smooth user interfaces. Thanks to my coursework at&nbsp;
-              <Link
+              <StyledLink
                 href="https://www.northeastern.edu/"
                 target="_blank"
                 rel="noreferrer"
               >
                 Northeastern University
-              </Link>
+              </StyledLink>
               , I’m always exploring new skills from both the development and
               design worlds and figuring out how to integrate them.
             </P>

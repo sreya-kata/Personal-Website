@@ -1,4 +1,4 @@
-import { Banner, HalfColumn, TextColumn } from "./Hero-Styles";
+import { Banner, HalfColumn, TextColumn, BannerImage } from "./Hero-Styles";
 import bannerGirl from "../../../assets/banner-girl.png";
 import resume from "../../../assets/Sreya.Kata.Resume.pdf";
 import { Button } from "../../../constants/buttons";
@@ -31,7 +31,10 @@ const Hero = () => {
         </TextColumn>
       </HalfColumn>
       <HalfColumn>
-        <img src={bannerGirl} alt="cartoon vector of girl"></img>
+        <BannerImage
+          src={bannerGirl}
+          alt="cartoon vector of girl"
+        ></BannerImage>
       </HalfColumn>
     </Banner>
   );

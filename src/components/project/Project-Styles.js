@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { devices } from "../../../constants/devices";
+import { devices } from "../../constants/devices";
 
-const AboutSection = styled.section`
+const ProjectDetails = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 7em;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 `;
 
 const HalfColumn = styled.div`
@@ -23,12 +24,12 @@ const TextColumn = styled.div`
     padding-right: 3em;
   }
   @media ${devices.laptop} {
-    padding-left: 4em;
-    padding-right: 6em;
+    padding-left: 6em;
+    padding-right: 4em;
   }
 `;
 
-const Bio = styled.div`
+const Description = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
 `;
@@ -43,9 +44,16 @@ const ImageColumn = styled.div`
     padding-right: 3em;
   }
   @media ${devices.laptop} {
-    padding-left: 4em;
-    padding-right: 0;
+    padding-right: 4em;
+    padding-left: 0;
   }
 `;
 
-export { AboutSection, HalfColumn, TextColumn, Bio, Img, ImageColumn };
+export {
+  ProjectDetails,
+  HalfColumn,
+  TextColumn,
+  Description,
+  Img,
+  ImageColumn,
+};

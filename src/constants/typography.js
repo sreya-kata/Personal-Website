@@ -68,6 +68,12 @@ const H3 = styled.h3`
   color: ${offBlack};
 `;
 
+const H3WithSpacing = styled(H3)`
+  margin-top: 0.05em;
+  margin-bottom: 0.05em;
+  letter-spacing: 0.55em;
+`;
+
 const H4 = styled.h4`
   font-size: ${fontSizes.h4};
   font-family: ${fonts.header};
@@ -86,11 +92,11 @@ const P = styled.p`
     line-height: 22px;
   }
   @media ${devices.tablet} {
-    line-height: 23px;
+    line-height: 22px;
   }
 `;
 
-const Link = styled.a`
+const StyledLink = styled.a`
   text-decoration: none;
   color: ${gray};
   font-family: ${fonts.body};
@@ -103,4 +109,16 @@ const Link = styled.a`
   }
 `;
 
-export { fonts, H1, H2, H3, H4, P, Link, fontSizes, fontWeights, textStyles };
+export {
+  fonts,
+  H1,
+  H2,
+  H3,
+  H3WithSpacing,
+  H4,
+  P,
+  StyledLink,
+  fontSizes,
+  fontWeights,
+  textStyles,
+};

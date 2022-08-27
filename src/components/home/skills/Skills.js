@@ -35,7 +35,7 @@ const cards = {
 
 const Skills = () => {
   return (
-    <SkillsSection>
+    <SkillsSection id="skills">
       <SkillsIntro>
         <H3>Skills</H3>
         <P>
@@ -56,7 +56,7 @@ const Skills = () => {
               <H4>{keyName}</H4>
               {cards[keyName].values.map((value) => {
                 return (
-                  <li>
+                  <li key={value}>
                     <PCard>{value}</PCard>
                   </li>
                 );

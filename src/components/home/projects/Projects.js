@@ -17,17 +17,19 @@ import { tan } from "../../../constants/colors";
 
 const Projects = () => {
   return (
-    <ProjectsSection>
+    <ProjectsSection id="projects">
       <ProjectsIntro>
         <H3>Projects</H3>
       </ProjectsIntro>
       <ProjectCards>
         {projectData.map((project) => {
           return (
-            <Card>
-              <ProjectImage src={project.image} />
+            <Card key={project.name}>
+              <a href={project.url}>
+                <ProjectImage src={project.image} />
+              </a>
               <ProjectHeader>
-                <ProjectLink>{project.name}</ProjectLink>
+                <ProjectLink href={project.url}>{project.name}</ProjectLink>
                 <FontAwesomeIcon icon={project.icon} color={tan} size="lg" />
               </ProjectHeader>
               <Languages>
