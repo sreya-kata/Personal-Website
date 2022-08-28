@@ -32,8 +32,8 @@ const ProjectCards = styled.div`
   margin-top: 3rem;
 
   @media ${devices.mobile} {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
   }
   @media ${devices.tablet} {
     padding-left: 4em;
@@ -46,6 +46,10 @@ const ProjectCards = styled.div`
   @media ${devices.desktop} {
     padding-left: 8.5em;
     padding-right: 8.5em;
+  }
+  ::after {
+    content: "";
+    flex: 0 0 30%;
   }
 `;
 
@@ -78,7 +82,8 @@ const ProjectImage = styled.img`
 
 const ProjectHeader = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  margin-top: 1rem;
 `;
 
 const ProjectLink = styled(StyledLink)`
@@ -88,7 +93,6 @@ const ProjectLink = styled(StyledLink)`
   text-transform: ${textStyles.uppercase};
   border-bottom: 2px solid ${tan};
   padding-bottom: 0.2rem;
-  margin-top: 1rem;
   margin-right: 0.8rem;
 `;
 

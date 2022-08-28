@@ -19,6 +19,7 @@ const Button = styled.button`
   cursor: pointer;
   transition: background 0.6s ease;
   margin-right: ${(props) => props.marginRight};
+  margin-bottom: 1rem;
 
   :hover {
     background: ${(props) => (props.secondary ? tanGradient : white)};

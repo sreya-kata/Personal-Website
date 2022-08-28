@@ -72,6 +72,7 @@ const H3WithSpacing = styled(H3)`
   margin-top: 0.05em;
   margin-bottom: 0.05em;
   letter-spacing: 0.55em;
+  word-break: break-word;
 `;
 
 const H4 = styled.h4`

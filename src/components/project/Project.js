@@ -20,14 +20,16 @@ const Project = ({ name, collage, description, code, live }) => {
           </Description>
           <a href={code} target="_blank" rel="noreferrer">
             <Button type="button" marginRight={"1.5rem"}>
-              Code
+              {code ? "Code" : "Code Available Upon Request"}
             </Button>
           </a>
-          <a href={live} target="_blank" rel="noreferrer">
-            <Button type="button" secondary>
-              Live
-            </Button>
-          </a>
+          {live && (
+            <a href={live} target="_blank" rel="noreferrer">
+              <Button type="button" secondary>
+                Live
+              </Button>
+            </a>
+          )}
         </TextColumn>
       </HalfColumn>
       <HalfColumn>

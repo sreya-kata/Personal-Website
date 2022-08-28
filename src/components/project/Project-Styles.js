@@ -24,8 +24,8 @@ const HalfColumn = styled.div`
 
 const TextColumn = styled.div`
   @media ${devices.mobile} {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
   }
   @media ${devices.tablet} {
     padding-left: 4em;
@@ -52,8 +52,8 @@ const Img = styled.img`
 
 const ImageColumn = styled.div`
   @media ${devices.mobile} {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
     margin-top: 2rem;
   }
   @media ${devices.tablet} {

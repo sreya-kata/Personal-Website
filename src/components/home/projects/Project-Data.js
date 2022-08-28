@@ -1,7 +1,6 @@
 import {
   faMedkit,
   faLandmark,
-  faHeart,
   faVirus,
   faSubway,
   faPlay,
@@ -13,15 +12,18 @@ import vital from "../../../assets/vital.png";
 import vitalDetails from "../../../assets/vitalDetails.png";
 import election from "../../../assets/election.jpeg";
 import electionDetails from "../../../assets/electionDetails.png";
-import pyramid from "../../../assets/pyramid.jpeg";
 import animator from "../../../assets/animator.jpeg";
+import animatorDetails from "../../../assets/animatorDetails.png";
 import covid from "../../../assets/covid.jpeg";
 import covidDetails from "../../../assets/covidDetails.jpeg";
 import job from "../../../assets/job.jpeg";
+import jobDetails from "../../../assets/jobDetails.png";
 import mbta from "../../../assets/mbta.jpeg";
 import mbtaDetails from "../../../assets/mbtaDetails.png";
 import ornami from "../../../assets/ornami.jpeg";
+import ornamiDetails from "../../../assets/ornamiDetails.png";
 import running from "../../../assets/running.jpeg";
+import runningDetails from "../../../assets/runningDetails.png";
 
 export const projectData = [
   {
@@ -65,13 +67,6 @@ export const projectData = [
     icon: faPersonRunning,
     languages: ["Java", "Android Studio"],
     url: "running",
-  },
-  {
-    name: "Pyramid Solitaire",
-    image: pyramid,
-    icon: faHeart,
-    languages: ["Java"],
-    url: "pyramid",
   },
   {
     name: "Ornami",
@@ -124,39 +119,31 @@ export const individualProjectData = {
   },
   job: {
     name: "Job Recommendation Engine",
-    collage: mbtaDetails,
+    collage: jobDetails,
     description:
-      "As a final project for a database class centered around SQL, my partner and I decided to represent the MBTA subway system as a relational model. Using MySQL, we first established our ER diagram and how we wanted to represent each entity within the system, to ultimately connect them together based on specific relationships.<br><br>Once an ER diagram was finalized, we began collecting data from various sources. Though this is further detailed in the report, we extracted data from the MBTA website, government CSVs, and cross-referencing maps. Upon importing this data into MySQL, we made the appropriate tables and keys. Our queries revolved around multiple points of analysis but they included questions regarding monthly ridership, location hotspots, and route density.<br><br>Using SQL standards for table creation and query writing, we successfully analyzed the MBTA subway system. In the future, I hope to use this model in real-world contexts like relations to gentrification and public transportation.",
+      "As a final project for a database class centered around NoSQL, my group and I decided to create a job recommendation engine based in Neo4j. Using Python, we first programatically generated data for all our desired fields, to ultimately combine them in a master dataset.<br><br>Once we converged the data together and made sure logic for certain values (like previous jobs, skills, etc. were accurate), we created a 'connectedness score' for each applicant based on their network. <br><br>Upon importing this data into Neo4j, we made the appropriate nodes and edges. Our queries revolved around multiple points of analysis but they included questions regarding popularity of jobs, skills, and connections.<br><br>Using NoSQL standards for Neo4j data and nodes and edges, we successfully analyzed a mock job search system.",
     code: "https://github.com/rahuls1098/jobRecommendationEngine",
     live: "https://www.youtube.com/watch?v=q8XvdC7n5bs",
   },
   running: {
     name: "RunningBuddy",
-    collage: mbtaDetails,
+    collage: runningDetails,
     description:
-      "As a final project for a database class centered around SQL, my partner and I decided to represent the MBTA subway system as a relational model. Using MySQL, we first established our ER diagram and how we wanted to represent each entity within the system, to ultimately connect them together based on specific relationships.<br><br>Once an ER diagram was finalized, we began collecting data from various sources. Though this is further detailed in the report, we extracted data from the MBTA website, government CSVs, and cross-referencing maps. Upon importing this data into MySQL, we made the appropriate tables and keys. Our queries revolved around multiple points of analysis but they included questions regarding monthly ridership, location hotspots, and route density.<br><br>Using SQL standards for table creation and query writing, we successfully analyzed the MBTA subway system. In the future, I hope to use this model in real-world contexts like relations to gentrification and public transportation.",
+      "As a final project for a mobile app class centered around Android Studio, my partner and I decided to create an app that would help runners in the Boston area find each other. We first established our Figma wireframes and how we wanted to separate each activity in the app, to ultimately connect them together based on the flow we outlines.<br><br>Once the wireframes were finalized, we mocked up the design on the XML files provided in Android Studio. We used Firebase authentication and data management to register and store data about each user. Users had the ability to make and edit a profile, find nearby runners (in a Tinder-esque format), and message any they wanted to connect with.<br><br>Using Java standards for classes and package management, we successfully created a fully-functioning app. In the future, I hope to build upon this project by expanding it outside of Boston locations and improving the UI.",
     code: "",
     live: "https://drive.google.com/file/d/1zE6u4_xw6S93CJLR9uBUNVWgbg_9JIVw/view",
   },
-  pyramid: {
-    name: "Pyramid Solitaire",
-    collage: mbtaDetails,
-    description:
-      "Based off the classic card game, this Java program allows users to choose between 3 modes of Pyramid (basic, relaxed, and multipyramid). Through the command line, users can specify the number of rows and draw cards they would like available (if, for some reason, either of the arguments are invalid, the game defaults to 7 rows and 3 draw cards).<br><br>Users are able to input various move commands (remove one card, remove two cards, remove a card with a draw card, and discraw a draw card) until they are either no more cards in the pyramid or there are no more draw cards and no more moves in the pyramid.<br><br>Using Object-Oriented Programming principles, this project takes advantage of abstraction, class delegation, and polymorphism.",
-    code: "",
-    live: "",
-  },
   ornami: {
     name: "Ornami",
-    collage: mbtaDetails,
+    collage: ornamiDetails,
     description:
-      "Based off the classic card game, this Java program allows users to choose between 3 modes of Pyramid (basic, relaxed, and multipyramid). Through the command line, users can specify the number of rows and draw cards they would like available (if, for some reason, either of the arguments are invalid, the game defaults to 7 rows and 3 draw cards).\n\nUsers are able to input various move commands (remove one card, remove two cards, remove a card with a draw card, and discraw a draw card) until they are either no more cards in the pyramid or there are no more draw cards and no more moves in the pyramid.\n\nUsing Object-Oriented Programming principles, this project takes advantage of abstraction, class delegation, and polymorphism.",
+      "My team at <a href='https://scout.camd.northeastern.edu/'>Scout</a> was in charge of revamping the brand and website of a growing skincare company - Ornami. We spent the semester working to change the brand identity into something more mature and contemporary. In doing so, we had to work out of the company's existing ecommerce platform: Shopify.<br><br> Shopify's templating language is <a href='https://shopify.github.io/liquid/'>Liquid</a> and it is used to build themes for the platform. As the tech lead on the team, I provided the fellow developers with insight on the language and read up on documentation myself. We worked on weekly sprints, releasing PRs on Sundays and spending the rest of the week iterating on the pages based on the Figma wireframes.<br><br>Using Shopify and Liquid, we made a fully-redesigned website for Ornami. They can update the content as they would like in the Shopify portal.",
     code: "",
     live: "https://ornamiskincare.com/",
   },
   animator: {
     name: "Easy Animator",
-    collage: mbtaDetails,
+    collage: animatorDetails,
     description:
       "As a final paired-programming project in Object-Oriented Design, the task was to produce fully-functioning 2D-shape animations from simple .txt files. One of the main goals for this assignment was to utilize the MVC structure and stress the importance of where mutation is allowed.<br><br>Users are able to include commands regarding the input file (which must follow a specific format), a view type (text, SVG, or Swing), and optional speeds and output file. An additional view option (interactive) allows users to adjust the tempo, play state, loopback, and form of movement—continuous or discrete—while the animation is playing.<br><br>Using Object-Oriented Programming principles, this project takes advantage of abstraction, class delegation, and polymorphism. Swing elements like JFrames and JPanels were also used.",
     code: "",

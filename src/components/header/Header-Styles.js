@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import { brown, white } from "../../constants/colors";
+import { black, brown, white } from "../../constants/colors";
 import { devices } from "../../constants/devices";
 
 const Navbar = styled.nav`
   display: flex;
   align-items: center;
-  padding-top: 1.7em;
-  padding-left: 2.7em;
-  padding-right: 2.7em;
+  padding-top: 1.9em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
 
   @media ${devices.laptop} {
     padding-top: 1.5em;
@@ -39,6 +39,7 @@ const NavLinks = styled.ul`
 
 const NavItem = styled.li`
   margin-right: 2em;
+  margin-bottom: ${(props) => (props.marginBottom ? "0.7rem" : "")};
   &:last-child {
     margin-right: 0;
   }
@@ -46,7 +47,7 @@ const NavItem = styled.li`
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: black;
+  color: ${(props) => (props.mobile ? white : black)};
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   letter-spacing: 0.04em;
@@ -130,24 +131,22 @@ const CrossContainer = styled.div`
   }
 `;
 
-const MobileNavItem = styled(NavItem)`
-  margin-bottom: 0.7rem;
-`;
-
-const MobileNavLink = styled(NavLink)`
-  color: ${white};
+const FlexEndColumn = styled(FlexColumn)`
+  justify-content: flex-end;
+  @media ${devices.laptop} {
+    display: none;
+  }
 `;
 
 export {
   Navbar,
   FlexColumn,
+  FlexEndColumn,
   NavLinks,
   NavItem,
   NavLink,
   DesktopNavLinks,
   MobileNavLinks,
-  MobileNavItem,
-  MobileNavLink,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,

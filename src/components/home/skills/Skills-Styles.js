@@ -26,8 +26,8 @@ const Cards = styled.div`
 
   @media ${devices.mobile} {
     margin-top: 2rem;
-    padding-left: 2.7em;
-    padding-right: 2.7em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
   }
   @media ${devices.tablet} {
     padding-left: 4em;

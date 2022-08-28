@@ -4,17 +4,16 @@ import logo from "../../assets/logo.png";
 import {
   Navbar,
   FlexColumn,
+  FlexEndColumn,
   NavLinks,
   NavItem,
   NavLink,
   DesktopNavLinks,
   MobileNavLinks,
-  MobileNavLink,
   SmallNavLinkContainer,
   SmallMenuContainer,
   SmallLinksContainer,
   CrossContainer,
-  MobileNavItem,
 } from "./Header-Styles";
 import { Hamburger, Cross } from "../../constants/icons";
 
@@ -70,30 +69,42 @@ const Header = () => {
           </FlexColumn>
         )}
       </DesktopNavLinks>
-      <SmallNavLinkContainer onClick={() => setSmallLinks(true)}>
-        <FlexColumn>
-          <Hamburger />
-        </FlexColumn>
-      </SmallNavLinkContainer>
-      {smallLinks && (
-        <SmallMenuContainer out={crossClose}>
-          <CrossContainer onClick={() => setCrossClose(true)}>
-            <Cross />
-          </CrossContainer>
-          <SmallLinksContainer>
-            <MobileNavLinks>
-              {Object.keys(navLinks).map((key, index) => {
-                return (
-                  <MobileNavItem key={index}>
-                    <MobileNavLink href={`/${navLinks[key]}`}>
-                      {key}
-                    </MobileNavLink>
-                  </MobileNavItem>
-                );
-              })}
-            </MobileNavLinks>
-          </SmallLinksContainer>
-        </SmallMenuContainer>
+      {path === "/" ? (
+        <>
+          <SmallNavLinkContainer onClick={() => setSmallLinks(true)}>
+            <FlexColumn>
+              <Hamburger />
+            </FlexColumn>
+          </SmallNavLinkContainer>
+          {smallLinks && (
+            <SmallMenuContainer out={crossClose}>
+              <CrossContainer onClick={() => setCrossClose(true)}>
+                <Cross />
+              </CrossContainer>
+              <SmallLinksContainer>
+                <MobileNavLinks>
+                  {Object.keys(navLinks).map((key, index) => {
+                    return (
+                      <NavItem marginBottom key={index}>
+                        <NavLink mobile href={`/${navLinks[key]}`}>
+                          {key}
+                        </NavLink>
+                      </NavItem>
+                    );
+                  })}
+                </MobileNavLinks>
+              </SmallLinksContainer>
+            </SmallMenuContainer>
+          )}
+        </>
+      ) : (
+        <FlexEndColumn>
+          <NavLinks>
+            <NavItem>
+              <NavLink href={`/`}>Back</NavLink>
+            </NavItem>
+          </NavLinks>
+        </FlexEndColumn>
       )}
     </Navbar>
   );

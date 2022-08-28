@@ -13,7 +13,6 @@ function App() {
   const mbta = individualProjectData.mbta;
   const job = individualProjectData.job;
   const running = individualProjectData.running;
-  const pyramid = individualProjectData.pyramid;
   const ornami = individualProjectData.ornami;
   const animator = individualProjectData.animator;
 
@@ -92,18 +91,6 @@ function App() {
                 description={running.description}
                 code={running.code}
                 live={running.live}
-              />
-            }
-          />
-          <Route
-            path="/pyramid"
-            element={
-              <Project
-                name={pyramid.name}
-                collage={pyramid.collage}
-                description={pyramid.description}
-                code={pyramid.code}
-                live={pyramid.live}
               />
             }
           />

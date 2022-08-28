@@ -5,7 +5,7 @@ const AboutSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 5em;
+  margin-top: 4.5em;
 
   @media ${devices.laptop} {
     margin-top: 7em;
@@ -27,8 +27,8 @@ const HalfColumn = styled.div`
 
 const TextColumn = styled.div`
   @media ${devices.mobile} {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
   }
   @media ${devices.tablet} {
     padding-left: 4em;
@@ -55,15 +55,14 @@ const Img = styled.img`
 
 const ImageColumn = styled.div`
   @media ${devices.mobile} {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
   }
   @media ${devices.tablet} {
     padding-left: 4em;
     padding-right: 4em;
   }
   @media ${devices.laptop} {
-    padding-left: 4em;
     padding-right: 0;
   }
 
