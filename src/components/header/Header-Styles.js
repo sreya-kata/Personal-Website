@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { black, brown, white, orange } from "../../constants/colors";
+import { black, white, orange } from "../../constants/colors";
 import { devices } from "../../constants/devices";
 
 const Navbar = styled.nav`

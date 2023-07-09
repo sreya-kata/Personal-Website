@@ -1,12 +1,6 @@
 import styled from "styled-components";
-import { brown, blue, white } from "../../../constants/colors";
-import {
-  fontWeights,
-  textStyles,
-  H4,
-  P,
-  fontSizes,
-} from "../../../constants/typography";
+import { blue, white } from "../../../constants/colors";
+import { H4, fontSizes } from "../../../constants/typography";
 import { devices } from "../../../constants/devices";
 
 const ProjectsSection = styled.div`
