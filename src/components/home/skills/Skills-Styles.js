@@ -4,8 +4,12 @@ import { P } from "../../../constants/typography";
 import { devices } from "../../../constants/devices";
 
 const SkillsSection = styled.div`
-  margin-top: 6rem;
+  margin-top: 4rem;
   text-align: center;
+
+  @media ${devices.tablet} {
+    margin-top: 6rem;
+  }
 `;
 
 const Cards = styled.div`

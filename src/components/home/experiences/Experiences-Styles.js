@@ -3,8 +3,12 @@ import { boxShadow } from "../../../constants/colors";
 import { devices } from "../../../constants/devices";
 
 const ExperiencesSection = styled.div`
-  margin-top: 8rem;
+  margin-top: 5rem;
   text-align: center;
+
+  @media ${devices.tablet} {
+    margin-top: 8rem;
+  }
 `;
 
 const ExperienceCards = styled.div`

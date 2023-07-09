@@ -11,7 +11,7 @@ const Navbar = styled.nav`
 
   @media ${devices.laptop} {
     padding-top: 1.5em;
-    padding-left: 4em;
+    padding-left: 5em;
     padding-right: 5em;
   }
 
@@ -98,7 +98,7 @@ const SmallMenuContainer = styled.div`
   position: absolute;
   z-index: 2;
   transition: all 0.25s;
-  background: ${brown};
+  background: ${orange};
   top: 1.2rem;
   right: 1.2rem;
   border-radius: 6%;

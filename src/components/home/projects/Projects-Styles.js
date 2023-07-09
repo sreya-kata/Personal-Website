@@ -58,7 +58,7 @@ const ProjectCards = styled.div`
 `;
 
 const Card = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   border-radius: 20px;
   box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.15);
   background: ${white};
@@ -68,6 +68,7 @@ const Card = styled.div`
     width: 100%;
   }
   @media ${devices.tablet} {
+    margin-bottom: 5rem;
     width: 48%;
   }
   @media ${devices.laptop} {

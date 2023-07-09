@@ -5,26 +5,15 @@ import { blue } from "../../../constants/colors";
 const AboutSection = styled.section`
   background: ${blue};
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
   margin-top: 4.5em;
+  padding-top: 1.5rem;
 
   @media ${devices.laptop} {
     margin-top: 7em;
-  }
-`;
-
-const HalfColumn = styled.div`
-  @media ${devices.mobile} {
-    width: 100%;
-  }
-  @media ${devices.tabletMax} {
-    margin-top: 2rem;
-    order: ${(props) => (props.secondMobile ? "2" : "")};
-  }
-  @media ${devices.laptop} {
-    width: 50%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
@@ -56,6 +45,13 @@ const Bio = styled.div`
 const Img = styled.img`
   margin-top: 2.2rem;
   margin-bottom: 3rem;
+
+  @media ${devices.mobileMax} {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 `;
 
 const ImageColumn = styled.div`
@@ -76,6 +72,11 @@ const ImageColumn = styled.div`
   @media ${devices.desktop} {
     padding-left: 8.5em;
   }
+
+  @media ${devices.tabletMax} {
+    order: ${(props) => (props.secondMobile ? "2" : "")};
+    margin: 0 auto;
+  }
 `;
 
-export { AboutSection, HalfColumn, TextColumn, Bio, Img, ImageColumn };
+export { AboutSection, TextColumn, Bio, Img, ImageColumn };

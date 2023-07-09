@@ -3,7 +3,7 @@ import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { faHammer } from "@fortawesome/free-solid-svg-icons";
 import { SkillsSection, Cards, SkillList, PCard } from "./Skills-Styles";
-import { P, H2, H4 } from "../../../constants/typography";
+import { H2, H4 } from "../../../constants/typography";
 import { white } from "../../../constants/colors";
 import "./Skills.css";
 

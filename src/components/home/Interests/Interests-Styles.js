@@ -1,15 +1,27 @@
 import styled from "styled-components";
 import { Button } from "../../../constants/buttons";
 import { boxShadow } from "../../../constants/colors";
+import { devices } from "../../../constants/devices";
 
 const InterestsSection = styled.section`
   margin-top: 3em;
   text-align: center;
 `;
 
+const Intro = styled.div`
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+`;
+
 const CarouselContainer = styled.div`
-  padding-left: 5em;
-  padding-right: 5em;
+  @media ${devices.tablet} {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+  @media ${devices.laptop} {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
 `;
 
 const Interest = styled.div`
@@ -43,6 +55,7 @@ const InterestButton = styled(Button)`
 
 export {
   InterestsSection,
+  Intro,
   CarouselContainer,
   Interest,
   Image,

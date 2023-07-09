@@ -12,7 +12,7 @@ import { H2, P, StyledLink } from "../../../constants/typography";
 const About = () => {
   return (
     <AboutSection id="about">
-      <ImageColumn>
+      <ImageColumn secondMobile>
         <Img src={states} alt="cartoon vector of girl"></Img>
       </ImageColumn>
       <TextColumn>

@@ -81,6 +81,9 @@ const P = styled.p`
   font-weight: ${fontWeights.normal};
   color: ${(props) => (props.white ? white : offBlack)};
   @media ${devices.mobile} {
+    line-height: 22px;
+  }
+  @media ${devices.tablet} {
     line-height: 23px;
   }
   @media ${devices.desktop} {

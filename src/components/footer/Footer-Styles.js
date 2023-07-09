@@ -8,13 +8,13 @@ const FooterSection = styled.section`
   flex-wrap: wrap;
   text-align: center;
   align-items: center;
-  margin-top: 1.6rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin-top: 4rem;
+  padding: 2rem 2.5em 1.5rem;
   background-color: ${blue};
 
   @media ${devices.laptop} {
     margin-top: 5rem;
+    padding-bottom: 2rem;
   }
 `;
 

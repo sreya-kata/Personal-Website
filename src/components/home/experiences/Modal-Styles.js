@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { boxShadow, orange, white } from "../../../constants/colors";
+import { orange, white } from "../../../constants/colors";
 import { P } from "../../../constants/typography";
 import { devices } from "../../../constants/devices";
 
@@ -32,9 +32,18 @@ const ModalContainer = styled.div`
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
   border: 2px solid #d9d9d9;
   overflow-y: auto;
-  max-height: 33rem;
-  max-width: 50rem;
+  max-height: 24rem;
+  max-width: 45rem;
   padding: 0.6em 2.5em 1.5em;
+
+  @media ${devices.tablet} {
+    max-height: 26rem;
+    max-width: 50rem;
+  }
+
+  @media ${devices.laptop} {
+    max-height: 33rem;
+  }
 `;
 
 const ModalHeader = styled.div`
