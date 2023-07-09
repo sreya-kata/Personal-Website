@@ -1,24 +1,23 @@
 import styled from "styled-components";
-import { boxShadow, white } from "../../../constants/colors";
-import { P } from "../../../constants/typography";
+import { boxShadow } from "../../../constants/colors";
 import { devices } from "../../../constants/devices";
 
-const SkillsSection = styled.div`
-  margin-top: 4rem;
+const ExperiencesSection = styled.div`
+  margin-top: 5rem;
   text-align: center;
 
   @media ${devices.tablet} {
-    margin-top: 6rem;
+    margin-top: 8rem;
   }
 `;
 
-const Cards = styled.div`
+const ExperienceCards = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 3rem;
 
   @media ${devices.mobile} {
-    margin-top: 2rem;
     padding-left: 2.5em;
     padding-right: 2.5em;
   }
@@ -29,39 +28,44 @@ const Cards = styled.div`
   @media ${devices.laptop} {
     padding-left: 5em;
     padding-right: 5em;
-    margin-top: 3rem;
   }
   @media ${devices.desktop} {
     padding-left: 8.5em;
     padding-right: 8.5em;
   }
+  ::after {
+    content: "";
+    flex: 0 0 30%;
+  }
 `;
 
-const SkillList = styled.ul`
-  background: ${white};
-  list-style: none;
-  padding-inline-start: 0;
-  text-align: center;
-  padding-top: 2em;
-  padding-bottom: 1.7em;
-  box-shadow: ${boxShadow};
+const Card = styled.div`
+  margin-bottom: 3rem;
 
   @media ${devices.mobile} {
     width: 100%;
   }
-
   @media ${devices.tablet} {
-    width: 47%;
+    width: 48%;
   }
-
   @media ${devices.laptop} {
-    padding-top: 2.4em;
-    width: 30%;
+    width: 31%;
+  }
+  @media ${devices.desktop} {
+    width: 27%;
   }
 `;
 
-const PCard = styled(P)`
-  line-height: 0.8em;
+const ExperienceImage = styled.img`
+  width: 100%;
+  display: block;
+  transition: box-shadow 0.7s ease;
+  border-radius: 20px;
+
+  :hover {
+    box-shadow: ${boxShadow};
+    cursor: pointer;
+  }
 `;
 
-export { SkillsSection, Cards, SkillList, PCard };
+export { ExperiencesSection, ExperienceCards, Card, ExperienceImage };

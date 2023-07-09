@@ -1,5 +1,5 @@
 import React from "react";
-import { white, brown } from "./colors";
+import { white, orange } from "./colors";
 
 const Hamburger = () => {
   return (
@@ -10,9 +10,9 @@ const Hamburger = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="32" height="2.72" fill={brown} />
-      <rect y="9.52002" width="32" height="2.72" fill={brown} />
-      <rect y="19.04" width="32" height="2.72" fill={brown} />
+      <rect width="32" height="2.72" fill={orange} />
+      <rect y="9.52002" width="32" height="2.72" fill={orange} />
+      <rect y="19.04" width="32" height="2.72" fill={orange} />
     </svg>
   );
 };

@@ -1,20 +1,18 @@
 import styled from "styled-components";
-import { white, tanGradient, offBlack } from "./colors";
+import { white, orange } from "./colors";
 import { fonts } from "./typography";
 import { devices } from "./devices";
 
 const Button = styled.button`
   position: relative;
-  background: ${(props) => (props.secondary ? white : tanGradient)};
-  background-clip: padding-box;
-  color: ${(props) => (props.secondary ? offBlack : white)};
-  border: 3px solid transparent;
-  border-radius: 4px;
-  padding: 1em 1.8em;
-  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.95em;
+  background: ${(props) => (props.secondary ? white : orange)};
+  color: ${(props) => (props.secondary ? orange : white)};
+  border: ${(props) =>
+    props.secondary ? `2px solid ${orange}` : `2px solid transparent`};
+  border-radius: 50px;
+  padding: 0.7em 2.5em;
+  font-size: 0.8rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: ${fonts.nav};
   cursor: pointer;
   transition: background 0.6s ease;
@@ -22,25 +20,13 @@ const Button = styled.button`
   margin-bottom: 1rem;
 
   :hover {
-    background: ${(props) => (props.secondary ? tanGradient : white)};
-    background-clip: padding-box;
-    color: ${(props) => (props.secondary ? white : offBlack)};
-  }
-
-  ::after {
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    bottom: -2px;
-    right: -2px;
-    background: ${tanGradient};
-    content: "";
-    z-index: -1;
-    border-radius: 4px;
+    background: ${(props) => (props.secondary ? orange : white)};
+    color: ${(props) => (props.secondary ? white : orange)};
+    border: 2px solid ${orange};
   }
 
   @media ${devices.tablet} {
-    padding: 1em 2.3em;
+    font-size: 1rem;
   }
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { black, brown, white } from "../../constants/colors";
+import { black, white, orange } from "../../constants/colors";
 import { devices } from "../../constants/devices";
 
 const Navbar = styled.nav`
@@ -11,8 +11,8 @@ const Navbar = styled.nav`
 
   @media ${devices.laptop} {
     padding-top: 1.5em;
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 5em;
+    padding-right: 5em;
   }
 
   @media ${devices.desktop} {
@@ -32,13 +32,17 @@ const FlexColumn = styled.div`
   }
 `;
 
+const Logo = styled.img`
+  width: 35%;
+`;
+
 const NavLinks = styled.ul`
   display: flex;
   list-style: none;
 `;
 
 const NavItem = styled.li`
-  margin-right: 2em;
+  margin-right: 4rem;
   margin-bottom: ${(props) => (props.marginBottom ? "0.7rem" : "")};
   &:last-child {
     margin-right: 0;
@@ -48,16 +52,13 @@ const NavItem = styled.li`
 const NavLink = styled.a`
   text-decoration: none;
   color: ${(props) => (props.mobile ? white : black)};
-  text-transform: uppercase;
   font-family: "Lato", sans-serif;
-  letter-spacing: 0.04em;
-  font-size: 0.93em;
+  font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   :hover {
-    background: linear-gradient(90deg, #996633 0%, #f1a48e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: ${orange};
   }
 `;
 
@@ -97,7 +98,7 @@ const SmallMenuContainer = styled.div`
   position: absolute;
   z-index: 2;
   transition: all 0.25s;
-  background: ${brown};
+  background: ${orange};
   top: 1.2rem;
   right: 1.2rem;
   border-radius: 6%;
@@ -141,6 +142,7 @@ const FlexEndColumn = styled(FlexColumn)`
 export {
   Navbar,
   FlexColumn,
+  Logo,
   FlexEndColumn,
   NavLinks,
   NavItem,
