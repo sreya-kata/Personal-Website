@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { devices } from "../../../constants/devices";
+import { blue } from "../../../constants/colors";
 
 const AboutSection = styled.section`
+  background: ${blue};
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
   margin-top: 4.5em;
 
@@ -35,8 +38,9 @@ const TextColumn = styled.div`
     padding-right: 4em;
   }
   @media ${devices.laptop} {
-    padding-left: 4em;
-    padding-right: 6em;
+    width: 50%;
+    padding-left: 3em;
+    padding-right: 5em;
   }
   @media ${devices.desktop} {
     padding-left: 5em;
@@ -50,7 +54,8 @@ const Bio = styled.div`
 `;
 
 const Img = styled.img`
-  width: 100%;
+  margin-top: 2.2rem;
+  margin-bottom: 3rem;
 `;
 
 const ImageColumn = styled.div`
@@ -63,6 +68,8 @@ const ImageColumn = styled.div`
     padding-right: 4em;
   }
   @media ${devices.laptop} {
+    width: 40%;
+    padding-left: 5em;
     padding-right: 0;
   }
 

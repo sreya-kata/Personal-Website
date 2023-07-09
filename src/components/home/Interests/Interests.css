@@ -1,0 +1,15 @@
+.rec.rec-arrow:hover,
+.rec.rec-arrow:focus,
+.rec.rec-arrow:hover:enabled,
+.rec.rec-arrow:focus:enabled {
+  background-color: #ff8730;
+}
+
+.rec.rec-carousel-item {
+  display: flex;
+}
+
+.rec.rec-dot.rec-dot_active {
+  background-color: rgba(255, 135, 48, 0.5);
+  box-shadow: #ff8730 0px 0px 1px 3px;
+}

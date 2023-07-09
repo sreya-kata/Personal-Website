@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import {
   Navbar,
   FlexColumn,
+  Logo,
   FlexEndColumn,
   NavLinks,
   NavItem,
@@ -36,14 +37,14 @@ const Header = () => {
   const navLinks = {
     About: "#about",
     Skills: "#skills",
+    Experience: "#experience",
     Projects: "#projects",
-    Contact: "#contact",
   };
   return (
     <Navbar>
       <FlexColumn>
         <a href="/#">
-          <img src={logo} alt="initial in brown circle" />
+          <Logo src={logo} alt="initial in brown circle" />
         </a>
       </FlexColumn>
       <DesktopNavLinks>

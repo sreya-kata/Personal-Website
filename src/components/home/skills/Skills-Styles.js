@@ -1,22 +1,11 @@
 import styled from "styled-components";
-import { boxShadow } from "../../../constants/colors";
+import { boxShadow, white } from "../../../constants/colors";
 import { P } from "../../../constants/typography";
 import { devices } from "../../../constants/devices";
 
 const SkillsSection = styled.div`
-  margin-top: 7rem;
-`;
-
-const SkillsIntro = styled.div`
+  margin-top: 6rem;
   text-align: center;
-  @media ${devices.mobile} {
-    padding-left: 2.7em;
-    padding-right: 2.7em;
-  }
-  @media ${devices.laptop} {
-    padding-left: 6em;
-    padding-right: 6em;
-  }
 `;
 
 const Cards = styled.div`
@@ -34,9 +23,9 @@ const Cards = styled.div`
     padding-right: 4em;
   }
   @media ${devices.laptop} {
+    padding-left: 5em;
+    padding-right: 5em;
     margin-top: 3rem;
-    padding-left: 6em;
-    padding-right: 6em;
   }
   @media ${devices.desktop} {
     padding-left: 8.5em;
@@ -45,17 +34,13 @@ const Cards = styled.div`
 `;
 
 const SkillList = styled.ul`
-  background: #f8f8f8;
+  background: ${white};
   list-style: none;
   padding-inline-start: 0;
   text-align: center;
-  padding-top: 2.5em;
+  padding-top: 2em;
   padding-bottom: 1.7em;
-  transition: box-shadow 0.7s ease;
-
-  :hover {
-    box-shadow: ${boxShadow};
-  }
+  box-shadow: ${boxShadow};
 
   @media ${devices.mobile} {
     width: 100%;
@@ -66,13 +51,13 @@ const SkillList = styled.ul`
   }
 
   @media ${devices.laptop} {
-    padding-top: 3.3em;
-    width: 22%;
+    padding-top: 2.4em;
+    width: 30%;
   }
 `;
 
 const PCard = styled(P)`
-  line-height: 1em;
+  line-height: 0.8em;
 `;
 
-export { SkillsSection, SkillsIntro, Cards, SkillList, PCard };
+export { SkillsSection, Cards, SkillList, PCard };

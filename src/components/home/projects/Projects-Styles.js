@@ -1,20 +1,23 @@
 import styled from "styled-components";
-import { tan, offBlack, brown, boxShadow } from "../../../constants/colors";
+import { brown, blue, white } from "../../../constants/colors";
 import {
-  fontSizes,
   fontWeights,
   textStyles,
-  StyledLink,
+  H4,
   P,
+  fontSizes,
 } from "../../../constants/typography";
 import { devices } from "../../../constants/devices";
 
 const ProjectsSection = styled.div`
-  margin-top: 7rem;
+  margin-top: 4rem;
 `;
 
 const ProjectsIntro = styled.div`
   text-align: center;
+  background: ${blue};
+  padding-bottom: 15rem;
+  padding-top: 0.5rem;
   @media ${devices.mobile} {
     padding-left: 2.7em;
     padding-right: 2.7em;
@@ -29,7 +32,7 @@ const ProjectCards = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: -13rem;
 
   @media ${devices.mobile} {
     padding-left: 2.5em;
@@ -40,13 +43,14 @@ const ProjectCards = styled.div`
     padding-right: 4em;
   }
   @media ${devices.laptop} {
-    padding-left: 6em;
-    padding-right: 6em;
+    padding-left: 5em;
+    padding-right: 5em;
   }
   @media ${devices.desktop} {
     padding-left: 8.5em;
     padding-right: 8.5em;
   }
+
   ::after {
     content: "";
     flex: 0 0 30%;
@@ -54,7 +58,11 @@ const ProjectCards = styled.div`
 `;
 
 const Card = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  border-radius: 20px;
+  box-shadow: 0px 3px 25px 0px rgba(0, 0, 0, 0.15);
+  background: ${white};
+  text-align: center;
 
   @media ${devices.mobile} {
     width: 100%;
@@ -63,55 +71,38 @@ const Card = styled.div`
     width: 48%;
   }
   @media ${devices.laptop} {
-    width: 30%;
+    width: 45%;
   }
   @media ${devices.desktop} {
     width: 27%;
   }
 `;
 
-const ProjectImage = styled.img`
-  width: 100%;
-  display: block;
-  transition: box-shadow 0.7s ease;
-
-  :hover {
-    box-shadow: ${boxShadow};
-  }
-`;
-
-const ProjectHeader = styled.div`
+const ImageContainer = styled.div`
   display: flex;
-  align-items: center;
-  margin-top: 1rem;
+  justify-content: center;
+  padding-top: 1.2rem;
 `;
 
-const ProjectLink = styled(StyledLink)`
-  color: ${offBlack};
-  font-size: ${fontSizes.h4};
-  font-weight: ${fontWeights.bold};
-  text-transform: ${textStyles.uppercase};
-  border-bottom: 2px solid ${tan};
-  padding-bottom: 0.2rem;
-  margin-right: 0.8rem;
+const ProjectImage = styled.img`
+  width: 90%;
 `;
 
-const Languages = styled.div`
-  margin-top: 0.8rem;
+const ProjectContent = styled.div`
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.8rem;
 `;
 
-const Language = styled(P)`
-  color: ${brown};
-  font-weight: ${fontWeights.semiBold};
-  text-transform: ${textStyles.uppercase};
-  display: inline;
-  letter-spacing: 0.01em;
+const Languages = styled(H4)`
+  font-size: ${fontSizes.p};
+  margin-top: -0.2rem;
 `;
 
-const Separator = styled.span`
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  font-weight: ${fontWeights.normal};
+const ButtonContainer = styled.div`
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
 `;
 
 export {
@@ -119,10 +110,9 @@ export {
   ProjectsIntro,
   ProjectCards,
   Card,
+  ImageContainer,
   ProjectImage,
-  ProjectHeader,
-  ProjectLink,
+  ProjectContent,
   Languages,
-  Language,
-  Separator,
+  ButtonContainer,
 };

@@ -1,55 +1,45 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
-import { faCropSimple } from "@fortawesome/free-solid-svg-icons";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { faHammer } from "@fortawesome/free-solid-svg-icons";
-import {
-  SkillsSection,
-  SkillsIntro,
-  Cards,
-  SkillList,
-  PCard,
-} from "./Skills-Styles";
-import { P, H4, H3 } from "../../../constants/typography";
+import { SkillsSection, Cards, SkillList, PCard } from "./Skills-Styles";
+import { P, H2, H4 } from "../../../constants/typography";
 import { white } from "../../../constants/colors";
 import "./Skills.css";
 
 const cards = {
-  Coding: {
+  Frontend: {
     icon: faLaptopCode,
-    values: ["Java", "HTML/CSS", "JavaScript", "SQL", "Python"],
+    values: [
+      "JavaScript/TypeScript",
+      "React",
+      "GraphQL",
+      "Figma",
+      "Gatsby",
+      "Shopify (Liquid)",
+    ],
   },
-  Frameworks: {
-    icon: faCropSimple,
-    values: ["React", "Swing", "Freemarker", "Node.js", "Bootstrap"],
-  },
-  Concepts: {
-    icon: faLightbulb,
-    values: ["OOP", "Data Analysis", "Marketing", "UI/UX", "Mobile App"],
+  Backend: {
+    icon: faGear,
+    values: ["Java", "Python", "SQL", "MongoDB", "Neo4j", "Android Studio"],
   },
   Tools: {
     icon: faHammer,
-    values: ["Git", "Shopify", "Figma", "Docker", "MongoDB"],
+    values: ["Git", "Jenkins", "Jira", "AWS", "Docker", "Postman"],
   },
 };
 
 const Skills = () => {
   return (
     <SkillsSection id="skills">
-      <SkillsIntro>
-        <H3>Skills</H3>
-        <P>
-          Being a combined major, I have experience with both programming and
-          theory as well as leadership and communication skills.
-        </P>
-      </SkillsIntro>
+      <H2>Moving Onto Tech</H2>
       <Cards>
         {Object.keys(cards).map(function (keyName, keyIndex) {
           return (
             <SkillList key={keyIndex}>
               <FontAwesomeIcon
                 icon={cards[keyName].icon}
-                size="2xl"
+                size="4x"
                 className="font-awesome-icon"
                 color={white}
               />
