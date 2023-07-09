@@ -22,6 +22,10 @@ const CenteredModal = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media ${devices.mobileMax} {
+    width: 80%;
+  }
 `;
 
 const ModalContainer = styled.div`
@@ -33,7 +37,6 @@ const ModalContainer = styled.div`
   border: 2px solid #d9d9d9;
   overflow-y: auto;
   max-height: 24rem;
-  max-width: 45rem;
   padding: 0.6em 2.5em 1.5em;
 
   @media ${devices.tablet} {
@@ -121,6 +124,7 @@ const Buttons = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export {
