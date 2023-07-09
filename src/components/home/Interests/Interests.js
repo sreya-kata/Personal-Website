@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Carousel from "react-carousel-elasticss";
 import {
   InterestsSection,
@@ -13,6 +14,22 @@ import { H2, H4, P } from "../../../constants/typography";
 import "./Interests.css";
 
 const Interests = () => {
+  const carouselRef = useRef(null);
+
+  const onNextStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the last item, go to first item
+      carouselRef.current.goTo(0);
+    }
+  };
+
+  const onPrevStart = (currentItem, nextItem) => {
+    if (currentItem.index === nextItem.index) {
+      // we hit the first item, go to last item
+      carouselRef.current.goTo(interestData.length);
+    }
+  };
+
   return (
     <InterestsSection>
       <Intro>
@@ -24,35 +41,17 @@ const Interests = () => {
         </P>
       </Intro>
       <CarouselContainer>
-        <Carousel itemsToShow={3} className="desktop-carousel">
-          {interestData.map((int) => (
-            <Interest key={int.name}>
-              <Image src={int.image}></Image>
-              <InterestContent>
-                <H4>{int.name}</H4>
-                <P>{int.description}</P>
-                <a href={int.url} target="_blank" rel="noreferrer">
-                  <InterestButton secondary>{int.buttonText}</InterestButton>
-                </a>
-              </InterestContent>
-            </Interest>
-          ))}
-        </Carousel>
-        <Carousel itemsToShow={2} className="tablet-carousel">
-          {interestData.map((int) => (
-            <Interest key={int.name}>
-              <Image src={int.image}></Image>
-              <InterestContent>
-                <H4>{int.name}</H4>
-                <P>{int.description}</P>
-                <a href={int.url} target="_blank" rel="noreferrer">
-                  <InterestButton secondary>{int.buttonText}</InterestButton>
-                </a>
-              </InterestContent>
-            </Interest>
-          ))}
-        </Carousel>
-        <Carousel itemsToShow={1} className="mobile-carousel">
+        <Carousel
+          disableArrowsOnEnd={false}
+          ref={carouselRef}
+          onPrevStart={onPrevStart}
+          onNextStart={onNextStart}
+          breakPoints={[
+            { width: 320, itemsToShow: 1 },
+            { width: 768, itemsToShow: 2 },
+            { width: 1024, itemsToShow: 3 },
+          ]}
+        >
           {interestData.map((int) => (
             <Interest key={int.name}>
               <Image src={int.image}></Image>
