@@ -68,9 +68,6 @@ const Card = styled.div`
   @media ${devices.laptop} {
     width: 45%;
   }
-  @media ${devices.desktop} {
-    width: 27%;
-  }
 `;
 
 const ImageContainer = styled.div`
