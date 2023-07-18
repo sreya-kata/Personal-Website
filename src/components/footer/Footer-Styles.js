@@ -15,18 +15,22 @@ const FooterSection = styled.section`
   @media ${devices.laptop} {
     margin-top: 5rem;
     padding-bottom: 2rem;
+    padding-left: 5em;
+    padding-right: 5em;
   }
 `;
 
 const FullWidth = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const SocialMedias = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
 `;
 
 const Copyright = styled(H3)`

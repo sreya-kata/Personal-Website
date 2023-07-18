@@ -7,7 +7,6 @@ const ExperienceCard = ({ experience }) => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
-    console.log("hello");
     setShowModal(true);
   };
 
