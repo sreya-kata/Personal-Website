@@ -9,7 +9,7 @@ const FooterSection = styled.section`
   text-align: center;
   align-items: center;
   margin-top: 4rem;
-  padding: 2rem 2.5em 1.5rem;
+  padding: 3rem 2.5em 1.5rem;
   background-color: ${blue};
 
   @media ${devices.laptop} {
@@ -26,11 +26,14 @@ const FullWidth = styled.div`
   justify-content: space-between;
 `;
 
+const FooterInfo = styled.div`
+  text-align: left;
+`;
+
 const SocialMedias = styled.div`
   display: flex;
-  justify-content: center;
   width: 100%;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 `;
 
 const Copyright = styled(H3)`
@@ -41,10 +44,18 @@ const Copyright = styled(H3)`
 
 const SocialMedia = styled.a`
   margin-right: 4rem;
+  text-decoration: none;
 
   &:last-child {
     margin-right: 0;
   }
 `;
 
-export { FooterSection, FullWidth, SocialMedias, Copyright, SocialMedia };
+export {
+  FooterSection,
+  FullWidth,
+  FooterInfo,
+  SocialMedias,
+  Copyright,
+  SocialMedia,
+};

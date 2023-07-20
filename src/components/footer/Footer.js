@@ -1,7 +1,8 @@
-import logo from "../../assets/logo.png";
+import logoLetters from "../../assets/logo-letters.png";
 import {
   FooterSection,
   FullWidth,
+  FooterInfo,
   SocialMedias,
   SocialMedia,
   Copyright,
@@ -34,10 +35,8 @@ const Footer = () => {
   return (
     <FooterSection id="contact">
       <FullWidth>
-        <div>
-          <a href="/#">
-            <img src={logo} alt="initials in blue circle" />
-          </a>
+        <FooterInfo>
+          <img src={logoLetters} alt="white 'sk' initials" />
           <SocialMedias>
             {socialMedias.map((socialMedia) => {
               return (
@@ -56,7 +55,7 @@ const Footer = () => {
             Designed in <b>Figma</b>, built in <b>React</b>, and deployed with{" "}
             <b>Netlify</b>
           </H3>
-        </div>
+        </FooterInfo>
         <div>
           <ContactForm />
         </div>
