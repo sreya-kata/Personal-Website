@@ -16,6 +16,11 @@ const FooterSection = styled.section`
     margin-top: 5rem;
     padding: 3rem 5em 2rem;
   }
+
+  @media ${devices.desktop} {
+    padding-left: 6em;
+    padding-right: 6em;
+  }
 `;
 
 const FullWidth = styled.div`
