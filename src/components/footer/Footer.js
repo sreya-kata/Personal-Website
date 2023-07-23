@@ -3,6 +3,7 @@ import {
   FooterSection,
   FullWidth,
   FooterInfo,
+  Logo,
   SocialMedias,
   SocialMedia,
   Copyright,
@@ -36,11 +37,15 @@ const Footer = () => {
     <FooterSection id="contact">
       <FullWidth>
         <FooterInfo>
-          <img src={logoLetters} alt="white 'sk' initials" />
+          <Logo src={logoLetters} alt="white 'sk' initials" />
           <SocialMedias>
             {socialMedias.map((socialMedia) => {
               return (
-                <SocialMedia href={socialMedia.url} target="_blank">
+                <SocialMedia
+                  href={socialMedia.url}
+                  target="_blank"
+                  key={socialMedia.url}
+                >
                   <div
                     dangerouslySetInnerHTML={{ __html: socialMedia.icon }}
                   ></div>

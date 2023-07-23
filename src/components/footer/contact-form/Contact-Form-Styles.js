@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { fontWeights, fonts } from "../../../constants/typography";
 import { blue, white } from "../../../constants/colors";
+import { devices } from "../../../constants/devices";
 
 const ContactFormContainer = styled.div`
-  text-align: right;
+  text-align: center;
+
+  @media ${devices.laptop} {
+    text-align: right;
+  }
 `;
 
 const EmailMeta = styled.div`
@@ -16,11 +21,18 @@ const MetaInput = styled.input`
   font-family: ${fonts.body};
   outline: none;
   &:first-child {
-    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 
   &:focus {
     outline: none;
+  }
+
+  @media ${devices.tablet} {
+    &:first-child {
+      margin-right: 1rem;
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -34,7 +46,11 @@ const EmailButtons = styled.div`
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+
+  @media ${devices.laptop} {
+    justify-content: flex-end;
+  }
 `;
 
 const SendButton = styled.button`
