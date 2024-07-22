@@ -6,7 +6,7 @@ import {
   Subtitle,
   HeroButtons,
 } from "./Hero-Styles";
-import resume from "../../../assets/Sreya.Kata.Resume.pdf";
+import resume from "../../../assets/Sreya.Katabathuni.Resume.pdf";
 import handGif from "../../../assets/hand.gif";
 import profile from "../../../assets/profile.png";
 import { Button } from "../../../constants/buttons";

@@ -9,7 +9,7 @@ import {
   Copyright,
 } from "./Footer-Styles";
 import { H3 } from "../../constants/typography";
-import resume from "../../assets/Sreya.Kata.Resume.pdf";
+import resume from "../../assets/Sreya.Katabathuni.Resume.pdf";
 import "./Footer.css";
 import ContactForm from "./contact-form/Contact-Form";
 
