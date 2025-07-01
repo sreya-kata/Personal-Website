@@ -27,7 +27,7 @@ export const interestData = [
     description:
       "Though I haven't made a food account yet, I love documenting the best restaurants I go to in different cities. Some of my favorites were in Portland, Oregon and San Diego, CA (like the one above!). Click the link below for a recent rec in NYC",
     buttonText: "Rec",
-    url: "https://www.dudleysnyc.com/",
+    url: "http://mewnyc.com/",
   },
   {
     name: "Reading",

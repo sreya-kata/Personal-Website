@@ -8,31 +8,38 @@ import { white } from "../../../constants/colors";
 import "./Skills.css";
 
 const cards = {
-  Frontend: {
+  Technical: {
     icon: faLaptopCode,
     values: [
+      "Java",
+      "Python",
+      "SQL",
       "JavaScript/TypeScript",
       "React",
       "GraphQL",
-      "Figma",
-      "Gatsby",
-      "Shopify (Liquid)",
     ],
   },
-  Backend: {
+  Product: {
     icon: faGear,
-    values: ["Java", "Python", "SQL", "MongoDB", "Neo4j", "Android Studio"],
+    values: [
+      "Sprint Planning",
+      "Backlog Grooming",
+      "Stakeholder Management",
+      "Data Analysis",
+      "Wireframing",
+      "User Stories",
+    ],
   },
   Tools: {
     icon: faHammer,
-    values: ["Git", "Jenkins", "Jira", "AWS", "Docker", "Postman"],
+    values: ["Git", "Figma", "Jira", "AWS", "Confluence", "Postman"],
   },
 };
 
 const Skills = () => {
   return (
     <SkillsSection id="skills">
-      <H2>Moving Onto Tech</H2>
+      <H2>Moving Onto Skills</H2>
       <Cards>
         {Object.keys(cards).map(function (keyName, keyIndex) {
           return (

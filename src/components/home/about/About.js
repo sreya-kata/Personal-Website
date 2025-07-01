@@ -37,7 +37,8 @@ const About = () => {
             Since then, I’ve worked at various companies (see below!) and am
             currently a Software Engineer at Scholastic in NYC, helping develop
             education tools for teachers and students to encourage learning and
-            reading!
+            reading! I realized I loved tech that isn’t just 
+            technically challenging—but also intuitive, scalable, and impactful. I’ve leaned into roles that let me blend engineering execution with product strategy, user empathy, and data-driven iteration.
           </P>
           <P white>
             When I’m not in front of my computer, you’ll find me exploring the
@@ -46,11 +47,11 @@ const About = () => {
           </P>
         </Bio>
         <a
-          href="https://www.linkedin.com/in/sreya-kata/"
+          href="https://github.com/sreya-kata"
           target="_blank"
           rel="noreferrer"
         >
-          <Button type="button">LinkedIn</Button>
+          <Button type="button">GitHub</Button>
         </a>
       </TextColumn>
     </AboutSection>

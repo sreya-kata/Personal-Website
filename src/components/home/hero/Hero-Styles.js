@@ -30,6 +30,7 @@ const TitleGif = styled.img`
 const Subtitle = styled(H3)`
   padding-left: 2.5em;
   padding-right: 2.5em;
+  line-height: 2rem;
 `;
 
 const HeroButtons = styled.div`

@@ -18,20 +18,30 @@ const Hero = () => {
         <TitleText>Hi I'm Sreya!</TitleText>
         <TitleGif src={handGif} alt="animated emoji hand wave" />
       </Title>
-      <Subtitle>Adolescent tumblr coder turned full-stack developer</Subtitle>
+      <Subtitle>
+        {" "}
+        Developer with a product mindset | Bridging design, data, and
+        engineering<br></br>
+        Adolescent Tumblr coder turned full-stack engineer building tools that
+        scale and beyond.
+      </Subtitle>
       <HeroButtons>
-        <a href={resume} target="_blank" rel="noreferrer">
+        <a
+          href="https://drive.google.com/drive/folders/10b9lyaLHghyjDU4djNH76Yn_4G3wkdVS?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
           <Button type="button" marginRight={"1.5rem"}>
-            Resume
+            Resumes
           </Button>
         </a>
         <a
-          href="https://github.com/sreya-kata"
+          href="https://www.linkedin.com/in/sreya-kata/"
           target="_blank"
           rel="noreferrer"
         >
           <Button type="button" secondary>
-            Github
+            LinkedIn
           </Button>
         </a>
       </HeroButtons>
